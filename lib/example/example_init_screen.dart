@@ -21,25 +21,25 @@ class ExampleInitScreen extends StatelessWidget {
           StackNavController(
             initialPage: StackNavModel(
               page: const ExampleListScreen(),
-              name: 'A1',
+              name: 'Page 1',
             ),
           ),
           StackNavController(
             initialPage: StackNavModel(
               page: const ExampleListScreen(),
-              name: 'B1',
+              name: 'Page 1',
             ),
           ),
           StackNavController(
             initialPage: StackNavModel(
               page: const ExampleListScreen(),
-              name: 'C1',
+              name: 'Page 1',
             ),
           ),
           StackNavController(
             initialPage: StackNavModel(
               page: const ExampleListScreen(),
-              name: 'D1',
+              name: 'Page 1',
             ),
           ),
         ];

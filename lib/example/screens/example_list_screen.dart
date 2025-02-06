@@ -86,12 +86,12 @@ class _ExampleListScreenState extends State<ExampleListScreen> {
               state.stackControllers[nextTabIndex].push(
                 StackNavModel(
                   page: ExampleListScreen(),
-                  name: 'Page ${state.stackControllers[nextTabIndex].stack.length}',
+                  name: 'Page ${state.stackControllers[nextTabIndex].stack.length+1}',
                 ),
               );
               state.tabController.changeTab(nextTabIndex);
             },
-            label: Text('Add & Switch to Tab $nextTabIndex'),
+            label: Text('Push Page & Switch to Tab ${nextTabIndex+1}'),
           ),
         );
       },
