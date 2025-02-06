@@ -47,8 +47,7 @@ class ExampleInitScreen extends StatelessWidget {
           ExampleNavigationState(
             stackControllers: stackControllers,
             tabController: TabNavController(
-              list: stackControllers.map((controller) => TabNavModel(page: StackNavView(controller: controller))).toList(),
-              initialIndex: 0,
+              initialIndex: 0
             ),
           ),
         );

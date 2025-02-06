@@ -57,7 +57,7 @@ class _ExampleListScreenState extends State<ExampleListScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<ExampleNavigationCubit, ExampleNavigationState>(
       builder: (context, state) {
-        final int nextTabIndex = (state.tabController.index + 1) % state.tabController.tabs.length;
+        final int nextTabIndex = (state.tabController.index + 1) % state.stackControllers.length;
         return Scaffold(
           body: Padding(
             padding: EdgeInsets.all(10),
@@ -86,12 +86,12 @@ class _ExampleListScreenState extends State<ExampleListScreen> {
               state.stackControllers[nextTabIndex].push(
                 StackNavModel(
                   page: ExampleListScreen(),
-                  name: 'Page ${state.stackControllers[nextTabIndex].stack.length+1}',
+                  name: 'Page ${state.stackControllers[nextTabIndex].stack.length + 1}',
                 ),
               );
               state.tabController.changeTab(nextTabIndex);
             },
-            label: Text('Push Page & Switch to Tab ${nextTabIndex+1}'),
+            label: Text('Push Page & Switch to Tab ${nextTabIndex + 1}'),
           ),
         );
       },
